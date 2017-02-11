@@ -1,28 +1,182 @@
+import random
+import time
+
 def begin():
-	print(">>>USE LONG 'DICK' JOHNSON SESSION TIMEOUT<<<")
-	print("                                             ")
+	print(">>>USER LONG 'DICK' JOHNSON SESSION TIMEOUT<<<")
+	time.sleep(1)
+	print("....")
+	print(">>>PLEASE ENTER PASSWORD<<<")
+	
+	password = input(">>>")
+	
+	if password == "longdickofthelaw":
+		database()
+	elif password != "longdickofthelaw":
+		bypass()
+	
+def bypass():
+	print(">>>INCORRECT LOGIN INFORMATION, LOCKDOWN BEGIN<<<")
+	print(">>>DO YOU WISH TO BYPASS?: Y/N <<<")
+	time.sleep(1)
+	
+	yesorno = input(">>>")
+	
+	if yesorno == "Y" or "y":
+		bypass1()
+	elif yesorno == "N" or "n":
+		begin()
+	
+def bypass1():
 	print(">>>BYPASSING LOGIN PROTOCOL<<<")
-	print("                                             ")
-	print(">>>WARNING: INCORRECT INPUT CAN RESULT IN SYSTEM ALARM")
+	time.sleep(1)
+	print("....")
+	time.sleep(1)
+	print(">>>WARNING: INCORRECT INPUT CAN RESULT IN SYSTEM SHUTDOWN")
+	print(">>>TYPE 'Bypass' TO CONTINUE<<<")
 	
-	choice = input("Press Enter To Continue. . .")
+	choice0 = input(">>>")
 	
-	if choice == " ":
-		print(">>>NOW CALIBRATING<<<")
+	if choice0 == "Bypass" or "bypass":
 		second()
+		
+
 def second():
-		print(">>>FOLLOW THE PROMPT ON YOUR SCREEN<<<")
-		print("     ")
-		print("The quick brown fox jumps over the lazy dog")
+	print(">>>NOW CALIBRATING<<<")
+	time.sleep(1)
+	print(">>>FOLLOW THE PROMPT ON YOUR SCREEN<<<")
+	time.sleep(1)
+	print("....")
+	time.sleep(1)
+	print("The quick brown fox jumps over the lazy dog")
 		
-		choice = input(">>>")
+	choice1 = input(">>>")
 		
-		if second == "The quick brown fox jumps over the lazy dog":
-			third()
-		elif second =="the quick brown fox jumps over the lazy dog":
-			third()
-		else:
-			print("ERROR")
-			second()
+	if choice1 == "The quick brown fox jumps over the lazy dog" or "the quick brown fox jumps over the lazy dog":
+		third()
+	elif choice1 != "The quick brown fox jumps over the lazy dog" or "the quick brown fox jumps over the lazy dog":
+		second()
+
 def third():
-	print("CONGRATULATIONS A WINNER IS YOU") 
+	time.sleep(1)
+	print(">>>PROGRESS 25%<<<")
+	time.sleep(1)
+	print("....")
+	time.sleep(1)
+	print("She sells seashells by the sea shore")
+	
+	choice2 = input(">>>")
+	
+	if choice2 == "She sells seashells by the sea shore" or "she sells seashells by the sea shore":
+		fourth()
+	elif choice2 != "She sells seashells by the sea shore" or "she sells seashells by the sea shore":
+		third()
+		
+def fourth():
+	time.sleep(1)
+	print(">>>PROGRESS 50%<<<")
+	time.sleep(1)
+	print("....")
+	time.sleep(1)
+	print("Jack be nimble, Jack be slick, can Jack hack into this computer quick")
+	
+	choice3 = input(">>>")
+	
+	if choice3 == "Jack be nimble, Jack be slick, can Jack hack into this computer quick" or "jack be nimble, jack be slick, can jack hack into this computer quick":
+		fifth()
+	elif choice3 != "Jack be nimble, Jack be slick, can Jack hack into this computer quick" or "jack be nimble, jack be slick, can jack hack into this computer quick":
+		fourth()
+
+def fifth():
+	time.sleep(1)
+	print(">>>PROGRESS 75%<<<")
+	time.sleep(1)
+	print("....")
+	time.sleep(1)
+	print("The thirty three thieves thought that they thrilled the throne throughout Thursday")
+		
+	choice4 = input(">>>")
+		
+	if choice4 == "The thirty three thieves thought that they thrilled the throne throughout Thursday" or "the thirty three thieves thought that they thrilled the throne throughout thursday":
+		database()
+	elif choice4 != "The thirty three thieves thought that they thrilled the throne throughout Thursday" or "the thirty three thieves thought that they thrilled the throne throughout thursday":
+		fifth()
+			
+def database():
+	print("....")
+	time.sleep(1)
+	print(">>>BYPASS COMPLETE, WELCOME RICHARD 'LONG DICK' JOHNSON III<<<")
+	time.sleep(1)
+	print(">>>~1~ Journal Entry")
+	print(">>>~2~ Power Armor Plans")
+	print(">>>~3~ Hidden Stuff")
+	print(">>>~4~ Bounties")
+	print(">>>~5~ Login Information")
+	time.sleep(1)
+	print(">>>PLEASE SELECT THE FILE YOU WISH TO VIEW BY ENTERING THE NUMBER<<<")
+	
+	choice5 = input(">>>")
+	
+	if choice5 == "1":
+		diary()
+	elif choice5 == "2":
+		pap()
+	elif choice5 == "3":
+		hiddenstuff()
+	elif choice5 == "4":
+		bounties()
+	elif choice5 == "5":
+		loginfo()
+	elif choice5 != "1" or "2" or "3" or "4" or "5":
+		database()
+	
+		
+
+def diary():
+	print("....")
+	time.sleep(1)
+	print("~JOURNAL ENTRY JANUARY 7TH 2087")
+	print("	Got some techno geek to fix up an old computer for me to use.")
+	print("Figured it might help me keep track of all the bounties in place")
+	print("and keep track of my thoughts.")
+	time.sleep(3)
+	print("	Funny that it's one of these computers.  Never thought I'd")
+	print("use one of these for anything more than selling as scrap.")
+	time.sleep(3)
+	print("I am putting a few other notes in here just in case I forget.")
+	print("Found a weird disc that had some corrupted info on Power Armor,")
+	print("might be able to salvage some of that and with some guesswork")
+	print("I'll have a set of my own Power Armor.")
+	time.sleep(3)
+	print("Typed in where I hid some of my stuff in the woods, hope nobody finds it")
+	print("Also keeping track of all the pending Bounties on here,")
+	print("including some that are a little more secret and aren't")
+	print("put up on the notice board in town.")
+	time.sleep(1)
+	print(">>>TYPE 'Database' TO RETURN TO DATABASE<<<")
+	
+	goback = input(">>>")
+	
+	if goback == "Database" or "database":
+		database()
+	elif goback != "Database" or "database":
+		diary()
+
+def loginfo():
+	print("....")
+	time.sleep(1)
+	print(">>>LOGIN INFORMATION FOR TERMINAL LDJ<<<")
+	print(">>>REGISTERED USER: RICHARD 'LDJ' JOHNSON III<<<")
+	print(">>>PASSWORD: longdickofthelaw<<<")
+	time.sleep(1)
+	print(">>>TYPE 'Database' TO RETURN TO DATABASE<<<")
+		
+	goback2 = input(">>>")
+	
+	if goback2 == "Database" or "database":
+		database()
+	elif goback2 != "Database" or "database":
+		loginfo()
+begin()
+
+
+		
