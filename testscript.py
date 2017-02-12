@@ -32,6 +32,9 @@ def bypass():
 		begin()
 	else:
 		print(">>>SYNTAX ERROR<<<")
+		time.sleep(1)
+		print(">>>REPEAT LAST PROCEDURE<<<")
+		time.sleep(1)
 		bypass()
 	
 def bypass1():
