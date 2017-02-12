@@ -11,20 +11,28 @@ def begin():
 	
 	if password == "longdickofthelaw":
 		database()
-	elif password != "longdickofthelaw":
+	else:
 		bypass()
 	
 def bypass():
 	print(">>>INCORRECT LOGIN INFORMATION, LOCKDOWN BEGIN<<<")
-	print(">>>DO YOU WISH TO BYPASS?: Y/N <<<")
 	time.sleep(1)
+	print(">>>DO YOU WISH TO BYPASS?: Y/N <<<")
+	
 	
 	yesorno = input(">>>")
 	
-	if yesorno == "Y" or "y":
+	if yesorno == "Y":
 		bypass1()
-	elif yesorno == "N" or "n":
+	elif yesorno == "N":
 		begin()
+	elif yesorno == "y":
+		bypass1()
+	elif yesorno == "n":
+		begin()
+	else:
+		print(">>>SYNTAX ERROR<<<")
+		bypass()
 	
 def bypass1():
 	print(">>>BYPASSING LOGIN PROTOCOL<<<")
@@ -36,8 +44,12 @@ def bypass1():
 	
 	choice0 = input(">>>")
 	
-	if choice0 == "Bypass" or "bypass":
+	if choice0 == "Bypass":
 		second()
+	elif choice0 == "bypass":
+		second()
+	else:
+		bypass1()
 		
 
 def second():
@@ -51,9 +63,11 @@ def second():
 		
 	choice1 = input(">>>")
 		
-	if choice1 == "The quick brown fox jumps over the lazy dog" or "the quick brown fox jumps over the lazy dog":
+	if choice1 == "The quick brown fox jumps over the lazy dog":
 		third()
-	elif choice1 != "The quick brown fox jumps over the lazy dog" or "the quick brown fox jumps over the lazy dog":
+	elif choice1 == "the quick brown fox jumps over the lazy dog":
+		third()
+	else:
 		second()
 
 def third():
@@ -66,9 +80,11 @@ def third():
 	
 	choice2 = input(">>>")
 	
-	if choice2 == "She sells seashells by the sea shore" or "she sells seashells by the sea shore":
+	if choice2 == "She sells seashells by the sea shore":
 		fourth()
-	elif choice2 != "She sells seashells by the sea shore" or "she sells seashells by the sea shore":
+	elif choice2 == "she sells seashells by the sea shore":
+		fourth()
+	else:
 		third()
 		
 def fourth():
@@ -77,15 +93,17 @@ def fourth():
 	time.sleep(1)
 	print("....")
 	time.sleep(1)
-	print("Jack be nimble, Jack be slick, can Jack hack into this computer quick")
+	print("Jack be nimble Jack be slick can Jack hack into this computer quick")
 	
 	choice3 = input(">>>")
 	
-	if choice3 == "Jack be nimble, Jack be slick, can Jack hack into this computer quick" or "jack be nimble, jack be slick, can jack hack into this computer quick":
+	if choice3 == "Jack be nimble Jack be slick can Jack hack into this computer quick":
 		fifth()
-	elif choice3 != "Jack be nimble, Jack be slick, can Jack hack into this computer quick" or "jack be nimble, jack be slick, can jack hack into this computer quick":
+	elif choice3 == "jack be nimble jack be slick can jack hack into this computer quick":
+		fifth()
+	else:
 		fourth()
-
+		
 def fifth():
 	time.sleep(1)
 	print(">>>PROGRESS 75%<<<")
@@ -96,9 +114,11 @@ def fifth():
 		
 	choice4 = input(">>>")
 		
-	if choice4 == "The thirty three thieves thought that they thrilled the throne throughout Thursday" or "the thirty three thieves thought that they thrilled the throne throughout thursday":
+	if choice4 == "The thirty three thieves thought that they thrilled the throne throughout Thursday":
 		database()
-	elif choice4 != "The thirty three thieves thought that they thrilled the throne throughout Thursday" or "the thirty three thieves thought that they thrilled the throne throughout thursday":
+	elif choice4 == "the thirty three thieves thought that they thrilled the throne throughout thursday":
+		database()
+	else:
 		fifth()
 			
 def database():
@@ -126,7 +146,11 @@ def database():
 		bounties()
 	elif choice5 == "5":
 		loginfo()
-	elif choice5 != "1" or "2" or "3" or "4" or "5":
+	else:
+		print(">>>SYNTAX ERROR")
+		time.sleep(1)
+		print(">>>REPEAT LAST PROCEDURE<<<")
+		time.sleep(1)
 		database()
 	
 		
@@ -138,27 +162,33 @@ def diary():
 	print("	Got some techno geek to fix up an old computer for me to use.")
 	print("Figured it might help me keep track of all the bounties in place")
 	print("and keep track of my thoughts.")
-	time.sleep(3)
+	time.sleep(2)
 	print("	Funny that it's one of these computers.  Never thought I'd")
 	print("use one of these for anything more than selling as scrap.")
-	time.sleep(3)
-	print("I am putting a few other notes in here just in case I forget.")
+	time.sleep(2)
+	print("	I am putting a few other notes in here just in case I forget.")
 	print("Found a weird disc that had some corrupted info on Power Armor,")
 	print("might be able to salvage some of that and with some guesswork")
 	print("I'll have a set of my own Power Armor.")
-	time.sleep(3)
-	print("Typed in where I hid some of my stuff in the woods, hope nobody finds it")
+	time.sleep(2)
+	print("	Typed in where I hid some of my stuff in the woods, hope nobody finds it")
 	print("Also keeping track of all the pending Bounties on here,")
 	print("including some that are a little more secret and aren't")
 	print("put up on the notice board in town.")
-	time.sleep(1)
+	time.sleep(2)
 	print(">>>TYPE 'Database' TO RETURN TO DATABASE<<<")
 	
 	goback = input(">>>")
 	
-	if goback == "Database" or "database":
+	if goback == "Database":
 		database()
-	elif goback != "Database" or "database":
+	elif goback == "database":
+		database()
+	else:
+		print(">>>SYNTAX ERROR<<<")
+		time.sleep(1)
+		print(">>>REPEAT LAST PROCEDURE<<<")
+		time.sleep(1)
 		diary()
 
 def loginfo():
@@ -172,11 +202,16 @@ def loginfo():
 		
 	goback2 = input(">>>")
 	
-	if goback2 == "Database" or "database":
+	if goback2 == "Database":
 		database()
-	elif goback2 != "Database" or "database":
+	elif goback2 == "database":
+		database()
+	else:
+		print(">>>SYNTAX ERROR<<<")
+		time.sleep(1)
+		print(">>>REPEAT LAST PROCEDURE<<<")
 		loginfo()
-begin()
 
+begin()
 
 		
